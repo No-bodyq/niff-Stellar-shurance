@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "ANALYZE=true next build",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint src --ext .ts,.tsx --max-warnings=0",
     "typecheck": "tsc --noEmit",
@@ -15,7 +15,7 @@
     "check-csp": "node scripts/check-csp-allowlist.mjs",
     "check-translations": "node scripts/check-translations.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "generate-client": "openapi-typescript ../backend/openapi.json -o src/lib/api/generated/openapi.d.ts --immutable"
   },
   "dependencies": {
